@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/cciocov/tribe-api/compare/v1.0.1...v1.0.2) (2020-04-23)
+
+
+### Bug Fixes
+
+* Fix module-update by doing a subrepo clean before subrepo pull ([9f9d70f](https://github.com/cciocov/tribe-api/commit/9f9d70f))
+
+
+
 ### [1.0.1](https://bitbucket.org/onsysol/node-seed-feathers/compare/v1.0.0...v1.0.1) (2020-03-23)
 
 
