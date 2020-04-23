@@ -155,6 +155,7 @@ mframe_modules_update() {
   # in case of any errors remove temp branch and restore initial state:
   trap 'mframe_utils_git_remove_temp_branch' ERR INT
 
+  RUN git subrepo clean $mod_dir -q
   RUN git subrepo pull $mod_dir -q -f
 
   # merge changes made on the temp branch and discard it:
