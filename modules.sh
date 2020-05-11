@@ -308,7 +308,7 @@ mframe_modules_status() {
     mframe_modules_set_current $(basename $subrepo)
     mframe_modules_upstream_diff
 
-    if echo "$wip_modules" | grep -q "$subrepo"; then
+    if echo "$wip_modules" | grep -Eq "([^[:alnum:]_.-]|^)$subrepo([^[:alnum:]_.-]|$)"; then
       uncommitted=" ** has uncommitted changes **"
     else
       uncommitted=
@@ -350,7 +350,7 @@ mframe_modules_info() {
       mframe_modules_get_versions
     fi
 
-    if echo "$wip_modules" | grep -q "$subrepo"; then
+    if echo "$wip_modules" | grep -Eq "([^[:alnum:]_.-]|^)$subrepo([^[:alnum:]_.-]|$)"; then
       uncommitted=" ** has uncommitted changes **"
     else
       uncommitted=
