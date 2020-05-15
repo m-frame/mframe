@@ -15,7 +15,7 @@ endef
 
 # run a bash function, defined in 'modules.sh':
 define MODULES_RUN
-ROOT_DIR="$(ROOT_DIR)" \
+export ROOT_DIR="$(ROOT_DIR)" \
 CLI_DIR="$(CLI_DIR)" \
 MODULES_DIR="$(MODULES_DIR)" \
 MODULES_GIT="$(MODULES_GIT)" \
@@ -24,7 +24,7 @@ MODULES_PFX="$(MODULES_PFX)" \
 MODULES_TMP="$(MODULES_TMP)" \
 MODULE_NAME="$(name)" \
 MODULE_V="$(v)" \
-source $(CLI_DIR)/modules.sh && mframe_modules
+&& source $(CLI_DIR)/modules.sh && mframe_modules
 endef
 
 MODULE_PARAMS = repo=$(repo) name=$(name) dir=$(dir)
