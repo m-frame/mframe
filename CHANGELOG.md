@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://ssh.dev.azure.com///compare/v1.0.3...v1.0.4) (2020-05-15)
+
+
+### Bug Fixes
+
+* Fix how variables are passed from the Makefile to the shell scripts ([cbd1bf7](https://ssh.dev.azure.com///commit/cbd1bf7))
+
+
+
 ### [1.0.3](https://github.com/cciocov/tribe-api/compare/v1.0.2...v1.0.3) (2020-05-11)
 
 
