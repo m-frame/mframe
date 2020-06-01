@@ -308,6 +308,15 @@ mframe_modules_status() {
     mframe_modules_set_current $(basename $subrepo)
     mframe_modules_upstream_diff
 
+    local upgrade=
+
+    if ! $mod_local; then
+      mframe_modules_get_versions
+      if [ "$mod_version" != "$mod_latest_version" ]; then
+        upgrade=" [v$mod_latest_version available]"
+      fi
+    fi
+
     if echo "$wip_modules" | grep -Eq "([^[:alnum:]_.-]|^)$subrepo([^[:alnum:]_.-]|$)"; then
       uncommitted=" ** has uncommitted changes **"
     else
@@ -317,7 +326,7 @@ mframe_modules_status() {
     printf %5s $mod_ahead
     printf " / "
     printf %-11s $mod_behind
-    echo "$mod_dirname ($mod_v) $uncommitted"
+    echo "$mod_dirname ($mod_v)$upgrade$uncommitted"
   done
 
   mframe_utils_git_stash_pop
