@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.5](https://bitbucket.org/onsysol/node-seed-feathers/compare/v1.0.4...v1.0.5) (2020-06-01)
+
+
+### Features
+
+* On module-status, indicate when an upgrade to a major version is available ([470c2e7](https://bitbucket.org/onsysol/node-seed-feathers/commit/470c2e7))
+
+
+
 ### [1.0.4](https://ssh.dev.azure.com///compare/v1.0.3...v1.0.4) (2020-05-15)
 
 
