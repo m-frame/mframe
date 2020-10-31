@@ -819,7 +819,7 @@ mframe_utils_git_stash_pop() {
 mframe_utils_git_create_temp_branch() {
   mframe_utils_ensure_root_dir
 
-  git_temp_branch=temp_$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 4 | head -n 1)
+  git_temp_branch=temp_$(cat /dev/urandom | LC_ALL=C tr -dc 'a-zA-Z0-9' | fold -w 4 | head -n 1)
   git_main_branch=$(git rev-parse --abbrev-ref HEAD)
 
   mframe_utils_git_stash_push
